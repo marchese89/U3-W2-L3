@@ -6,17 +6,22 @@ import Layout from "./components/Layout";
 import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import TVShows from "./components/TVShows";
+import MovieDetails from "./components/MovieDetails";
+import { useState } from "react";
 
 function App() {
+  const [search, setSearch] = useState("series");
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout setSearch={setSearch} />}>
             <Route index element={<Main />} />
             <Route path="profile" element={<Profile />} />
             <Route path="settings" element={<Settings />} />
-            <Route path="tv-shows" element={<TVShows />} />
+            <Route path="tv-shows" element={<TVShows search={search} />} />
+            <Route path="/movie-detail/:movieId" element={<MovieDetails />} />
           </Route>
         </Routes>
       </BrowserRouter>

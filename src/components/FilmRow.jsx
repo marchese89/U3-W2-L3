@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class FilmRow extends Component {
   state = {
@@ -58,7 +59,9 @@ class FilmRow extends Component {
           {this.state.filmImages.map((film) => {
             return (
               <div className="col gx-1" key={film.imdbID}>
-                <img src={film["Poster"]} alt="" className="w-100" />
+                <Link to={"/movie-detail/" + film.imdbID}>
+                  <img src={film["Poster"]} alt="" className="w-100" />
+                </Link>
               </div>
             );
           })}

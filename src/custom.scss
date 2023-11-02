@@ -197,3 +197,14 @@ h6 {
     text-decoration: none;
   }
 }
+
+.search-input,
+.search-input:focus {
+  outline: none;
+  border-radius: 7px;
+  color: white !important;
+  &::placeholder {
+    color: white;
+  }
+  width: 8em;
+}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Alert } from "react-bootstrap";
 import FilmRowFunction from "./FilmRowFunction";
 
-export default function TVShows() {
+export default function TVShows({ search }) {
   const [error, setError] = useState({
     error: false,
     errorMessage: "",
@@ -15,7 +15,7 @@ export default function TVShows() {
           {error.errorMessage}
         </Alert>
       )}
-      <FilmRowFunction query="series" handleError={setError} />
+      <FilmRowFunction handleError={setError} search={search} />
     </>
   );
 }

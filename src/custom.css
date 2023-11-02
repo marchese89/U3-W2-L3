@@ -180,4 +180,19 @@ h6 {
 }
 .link:hover {
   text-decoration: none;
+}
+
+.search-input,
+.search-input:focus {
+  outline: none;
+  border-radius: 7px;
+  color: white !important;
+  width: 8em;
+}
+.search-input::-moz-placeholder, .search-input:focus::-moz-placeholder {
+  color: white;
+}
+.search-input::placeholder,
+.search-input:focus::placeholder {
+  color: white;
 }/*# sourceMappingURL=custom.css.map */
