@@ -1,0 +1,199 @@
+$bg-netflix: #141414;
+
+.bg-netflix {
+  background-color: $bg-netflix;
+}
+
+#logo img {
+  width: 7em;
+}
+
+nav {
+  height: 5rem;
+}
+
+#avatar,
+.avatar {
+  width: 2rem;
+}
+
+#filter {
+  background-color: $bg-netflix;
+}
+
+.col img {
+  transition: transform 0.2s linear;
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+$netflix-grey: #808080;
+
+footer div i {
+  color: $netflix-grey;
+}
+
+#footer-text {
+  color: $netflix-grey;
+}
+
+@mixin buttonMixin {
+  background-color: $bg-netflix;
+  color: $netflix-grey;
+  border: 1px solid $netflix-grey;
+}
+
+footer div button {
+  @include buttonMixin;
+}
+
+footer p {
+  color: $netflix-grey;
+}
+
+input {
+  background-color: #666666;
+}
+
+#main div img {
+  height: 8rem;
+  width: 8rem;
+}
+
+section select {
+  background-color: $bg-netflix;
+  width: 5rem;
+}
+
+section button {
+  @include buttonMixin;
+}
+
+section div {
+  @include buttonMixin;
+  background-color: #333333;
+  width: 12rem;
+  text-align: center;
+}
+
+// input[type="checkbox"]{
+//   background-color: #333333;
+//   font-size: xx-small;
+//   color: aqua;
+// }
+
+section h1 {
+  text-align: left;
+  width: 100%;
+}
+
+.b-withe {
+  color: $bg-netflix;
+  border: 0;
+}
+
+section input[type="text"] {
+  width: 20rem;
+}
+
+/* Personalizzo il label e quindi il contenitore dell'input */
+.checkbox-wrapper {
+  display: inline-block;
+  position: relative;
+  padding-left: 29px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 0.8em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Nascondo il checkbox di base del browser */
+.checkbox-wrapper input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* creo il mio checkbox */
+.checkbox-wrapper .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+/* Creo la spunta all'interno dell'input (inizialmente nascosta) */
+.checkbox-wrapper .checkmark::after {
+  content: "";
+  position: absolute;
+  right: 0.35em;
+  width: 9px;
+  height: 13px;
+  border: solid #81888d;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: none;
+}
+.checkbox-wrapper input:checked ~ .checkmark::after {
+  display: block;
+}
+
+nav {
+  background-color: $bg-netflix;
+  ul {
+    li {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  #logo {
+    margin-left: -0.7em;
+  }
+}
+
+a {
+  color: #4c85b3;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#settings a {
+  color: #4c85b3;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h6 {
+  color: #b3b3b3;
+}
+
+#uhd {
+  border: 2px solid black;
+  padding: 0.1em;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+  }
+}
